@@ -7,7 +7,8 @@ import (
 )
 
 func main() {
-	res, err := search.SearchGoogle("getstreamio")
+	baseSearchUrl := "https://www.google.com/search?q="
+	res, err := search.Search(baseSearchUrl,"getstream.io")
 	if err != nil {
 		fmt.Println("ERROR...!!!")
 	}
